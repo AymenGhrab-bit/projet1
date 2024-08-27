@@ -1,0 +1,13 @@
+// Sequence Diagram for Authentication Process
+digraph {
+	User [label=User]
+	Browser [label=Browser]
+	Server [label=Server]
+	DB [label=Database]
+	User -> Browser [label="1: Enter Credentials (Username, Password)"]
+	Browser -> Server [label="2: Send Credentials to Server"]
+	Server -> DB [label="3: Query User Credentials"]
+	DB -> Server [label="4: Return Credentials Match/No Match"]
+	Server -> Browser [label="5: Authentication Success/Failure"]
+	Browser -> User [label="6: Display Result (Access Granted/Denied)"]
+}
